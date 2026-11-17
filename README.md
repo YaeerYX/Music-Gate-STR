@@ -1,76 +1,112 @@
-# Music Gate - STR Project
+# 🎸 Music Gate: Software Test Report (STR)
 
-This repository contains a complete Software Test Report (STR) created for the Music Gate web application as part of a hands-on QA testing project.
+Manual QA project for **[Music Gate](https://musicgate.co.il/)**, a live Israeli e-commerce website for musical instruments and audio equipment.
 
-## About Music Gate
+I planned, executed and documented a full QA cycle: a testing tree, 153 test cases in TestRail, 36 bug reports, 2 console bugs, and a first set of automated tests with Python and Selenium.
 
-Music Gate is a WooCommerce-based e-commerce web application focused on musical instruments and audio equipment.
+📄 **[Read the full STR (PDF, 82 pages)](Music%20Gate%20STR%20Project.pdf)**
 
-The platform includes common e-commerce functionalities such as:
+---
 
-- User login and authentication
-- Product browsing and categories
-- Product search functionality
-- Shopping cart management
-- Navigation menus and footer sections
-- Responsive UI elements
-- Customer interaction flows
+## 📊 Key Numbers
 
-The website was used as a practical testing environment for both Manual QA processes and introductory Automation Testing.
+| Test Cases | Testing Sections | Bug Reports | Console Bugs | Automated Tests |
+|:---:|:---:|:---:|:---:|:---:|
+| **153** | **36** | **36** | **2** | **4** (Selenium) |
 
+---
 
+## ✅ Test Execution Results (TestRail)
 
-## Project Overview
+| Status | Test Cases | % |
+|---|:---:|:---:|
+| ✅ Passed | 116 | 76% |
+| ❌ Failed | 29 | 19% |
+| ⛔ Blocked | 7 | 5% |
+| ⏸️ Untested | 1 | 1% |
+| **Total** | **153** | |
 
-The purpose of this project was to evaluate the functionality, usability, stability and overall user experience of the Music Gate platform through structured manual testing and basic automation validation.
+---
 
-The project focused primarily on Manual QA processes while also including introductory automation testing as part of the overall testing workflow.
+## 🎯 Testing Scope
 
-This project reflects my early stage in automation testing and demonstrates my learning process and professional growth over time.
+**Fully covered:** Functional · UI · Usability · Regression · Exploratory
 
+**Partially covered:** Responsiveness & Compatibility · Performance · Accessibility · Security Awareness · Automation
 
+**Main areas tested:** Login & Registration · Session Management · Cart & Checkout · Homepage · Search & Filters · Sorting · Categories · Footer & Utility Links · Responsiveness · Performance · Accessibility
 
-## Project Scope
+**Browsers:** Google Chrome · Safari · Microsoft Edge · Firefox (including private modes), on macOS
 
-The STR document includes:
+---
 
-- Test objectives and testing scope
-- Test scenarios and executed test cases
-- Test execution results
-- Detailed bug reports
-- Recommendations and final conclusions
-- Cross-browser testing analysis
-- Functional and UI validation
+## 🐞 Defects
 
-## Testing Types Performed
+### By Severity
 
-- Manual Testing
-- Functional Testing
-- Exploratory Testing
-- Cross-Browser Testing
-- UI Testing
-- Basic Automation Testing
-- Regression-oriented validation
+| Show Stopper | Critical | Major | Minor | Low |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 5 | 12 | 11 | 8 |
 
-## Tools and Methods Used
+### By Priority
 
-- STR and STD documentation
-- TestRail
-- Custom bug reporting template
-- Browser Developer Tools
-- Basic Selenium and Python automation
-- QA analysis and reporting workflows
+| High | Medium | Low |
+|:---:|:---:|:---:|
+| 12 | 11 | 13 |
 
-  
+### Critical Bugs
 
-## Automation Project
+| ID | Bug |
+|---|---|
+| B111 | Invalid email format not detected on the registration page |
+| B115 | Registration form accepts an invalid email format without an error |
+| B124 | Session does not expire after an inactivity period |
+| B166 | Keyboard navigation for accessibility is inconsistent |
+| B168 | Checkout flow is not fully accessible using the keyboard only |
 
-A separate and more advanced automation project for Music Gate is also available here:
+### Other Notable Findings
 
-[Music Gate Automation Project]:(https://github.com/X-Raycers/musicgate-playwright-automation)
+- **B106:** No lockout or CAPTCHA after multiple failed login attempts
+- **B37 / B39:** Login fails silently with empty fields in Safari Private and Edge InPrivate
+- **B129 to B134:** Cart icon does not update after adding, removing or changing product quantity
+- **B147 to B150:** Category, brand, price and popularity filters do not affect search results
 
+Every bug report includes a description, environment, steps to reproduce, expected vs. actual results, severity, priority and evidence.
 
+---
 
-## Notes
+## 🖥️ Console Bugs (Chrome DevTools)
 
-While the automation section in this project was relatively basic compared to my current level, I intentionally chose to keep the original work as part of my portfolio to reflect my learning journey, practical experience and progression in QA Automation.
+| ID | Bug | Severity | Priority |
+|---|---|:---:|:---:|
+| BC001 | Server error 500 on resource load | Major | Medium |
+| BC002 | Uncaught TypeError when reading the `lcp` property (in a Promise) | Minor | Low |
+
+---
+
+## 🤖 First Steps in Automation
+
+I wrote 4 automated tests with **Python + Selenium** (3 basic, 1 intermediate): loading the homepage, the guitar category page and a product page, and a search flow.
+
+One test failed on an assertion error. Manual investigation showed it was a **real bug** and not a script issue, which taught me how manual testing and automation complement each other.
+
+➡️ This project later evolved into a full automation framework with Playwright and Pytest: **[MusicGate-Automation](https://github.com/YaeerYX/MusicGate-Automation)**
+
+---
+
+## 📝 Release Recommendation
+
+**Release with caution.** Core flows are stable, but form validation, error handling, UI responsiveness and accessibility need improvements, followed by regression testing.
+
+---
+
+## 🛠️ Tools
+
+![TestRail](https://img.shields.io/badge/TestRail-65C179?style=for-the-badge)
+![Chrome DevTools](https://img.shields.io/badge/Chrome_DevTools-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+
+---
+
+**Prepared by:** Yaeer Gratsyani | YX &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/yx-/) &nbsp;·&nbsp; [GitHub](https://github.com/YaeerYX)
