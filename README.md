@@ -6,6 +6,13 @@ I planned, executed and documented a full QA cycle: a testing tree, 153 test cas
 
 📄 **[Read the full STR (PDF, 82 pages)](Music%20Gate%20STR%20Project.pdf)**
 
+<table>
+<tr>
+<td align="center"><img src="str-01-cover.png" alt="STR cover" width="380"><br><sub>STR cover</sub></td>
+<td align="center"><img src="str-02-testing-tree.png" alt="Testing tree: 36 sections" width="380"><br><sub>Testing tree: 36 sections</sub></td>
+</tr>
+</table>
+
 ---
 
 ## 📊 Key Numbers
@@ -25,6 +32,10 @@ I planned, executed and documented a full QA cycle: a testing tree, 153 test cas
 | ⛔ Blocked | 7 | 5% |
 | ⏸️ Untested | 1 | 1% |
 | **Total** | **153** | |
+
+<p align="center">
+  <img src="str-03-testrail-status.png" alt="TestRail execution status" width="500"><br><sub>TestRail execution status</sub>
+</p>
 
 ---
 
@@ -54,6 +65,13 @@ I planned, executed and documented a full QA cycle: a testing tree, 153 test cas
 |:---:|:---:|:---:|
 | 12 | 11 | 13 |
 
+<table>
+<tr>
+<td align="center"><img src="str-04-severity.png" alt="Severity distribution" width="380"><br><sub>Severity distribution</sub></td>
+<td align="center"><img src="str-05-priority.png" alt="Priority distribution" width="380"><br><sub>Priority distribution</sub></td>
+</tr>
+</table>
+
 ### Critical Bugs
 
 | ID | Bug |
@@ -73,6 +91,10 @@ I planned, executed and documented a full QA cycle: a testing tree, 153 test cas
 
 Every bug report includes a description, environment, steps to reproduce, expected vs. actual results, severity, priority and evidence.
 
+<p align="center">
+  <img src="str-06-bug-report.png" alt="Example bug report (B37)" width="500"><br><sub>Example bug report (B37)</sub>
+</p>
+
 ---
 
 ## 🖥️ Console Bugs (Chrome DevTools)
@@ -81,6 +103,10 @@ Every bug report includes a description, environment, steps to reproduce, expect
 |---|---|:---:|:---:|
 | BC001 | Server error 500 on resource load | Major | Medium |
 | BC002 | Uncaught TypeError when reading the `lcp` property (in a Promise) | Minor | Low |
+
+<p align="center">
+  <img src="str-07-console-bug.png" alt="Console bug report (BC001)" width="500"><br><sub>Console bug report (BC001)</sub>
+</p>
 
 ---
 
